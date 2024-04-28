@@ -9,7 +9,7 @@ const ContactList = () => {
   const isLoading = useSelector(selectLoading);
   const error = useSelector(selectError);
 
-  if (isLoading) return <p>  <RotatingLines
+  if (isLoading) return <RotatingLines
   visible={true}
   height="96"
   width="96"
@@ -19,7 +19,7 @@ const ContactList = () => {
   ariaLabel="rotating-lines-loading"
   wrapperStyle={{}}
   wrapperClass=""
-  /></p>;
+  />;
   if (error) return <p>Error: {error}</p>;
 
   return (
